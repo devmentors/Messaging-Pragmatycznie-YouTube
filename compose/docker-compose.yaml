@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.13.6-management
+    container_name: 'rabbitmq'
+    restart: unless-stopped
+    networks:
+      - Filo
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 15692:15692
+    # volumes: 
+    #   - rabbitmq:/var/lib/rabbitmq
+
+networks:
+  Filo:
+    name: filo-network
+
+# volumes:
+  # rabbitmq:
+  #   driver: local
+ 
+  
