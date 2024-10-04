@@ -7,8 +7,8 @@ To repozytorium zawiera aplikację Filo, która stanowić będzie oś dyskusji n
 
 # Lista odcinków
 1. [Messaging, czyli po co nam komunikacja asynchroniczna?](https://www.youtube.com/watch?v=cA1Cpqk1Zxo)
-2. ???
-3. ???
+2. [COUPLING - powiązania i zależności w systemach rozproszonych](https://www.youtube.com/watch?v=q3KOp68QwRA)
+3. [ORDERING, czyli dlaczego KOLEJNOŚĆ komunikatów nie jest oczywista?](https://www.youtube.com/watch?v=IXZ_JcGlJVY)
 4. ???
 
 
