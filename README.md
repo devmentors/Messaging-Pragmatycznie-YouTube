@@ -9,7 +9,9 @@ To repozytorium zawiera aplikację Filo, która stanowić będzie oś dyskusji n
 1. [Messaging, czyli po co nam komunikacja asynchroniczna?](https://www.youtube.com/watch?v=cA1Cpqk1Zxo)
 2. [COUPLING - powiązania i zależności w systemach rozproszonych](https://www.youtube.com/watch?v=q3KOp68QwRA)
 3. [ORDERING, czyli dlaczego KOLEJNOŚĆ komunikatów nie jest oczywista?](https://www.youtube.com/watch?v=IXZ_JcGlJVY)
+  - przykłady z tego odcinka znajdują się na branchu [ordering](https://github.com/devmentors/Messaging-Pragmatycznie-YouTube/tree/ordering)
 4. [PARTYCJONOWANIE, czyli jak zapewnić kolejność przetwarzania wiadomości? | ORDERING cz. 2](https://youtu.be/hcc1fCoK29A)
+  - przykłady z tego odcinka znajdują się na branchu [partitioning](https://github.com/devmentors/Messaging-Pragmatycznie-YouTube/tree/partitioning)
 
 
 ## Jak uruchomić?
