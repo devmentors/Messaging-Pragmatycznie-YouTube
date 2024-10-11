@@ -10,8 +10,4 @@
       <ProjectReference Include="..\Filo.Shared.Infrastructure\Filo.Shared.Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Asp.Versioning.WebApi" Version="7.1.0" />
-    </ItemGroup>
-
 </Project>
