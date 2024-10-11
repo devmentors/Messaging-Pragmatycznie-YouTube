@@ -1,3 +1,4 @@
+using Filo.Shared.Infrastructure.Messaging.Azure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQ.Client;
@@ -18,6 +19,15 @@ public static class Extensions
         services.AddSingleton<IMessagePublisher, MessagePublisher>();
         services.AddSingleton<IMessageConsumer, MessageConsumer>();
         
+        return services;
+    }
+
+    public static IServiceCollection AddAzureServiceBus(this IServiceCollection services, IConfiguration configuration)
+    {
+        var connString = configuration.GetValue<string>("AzureServiceBus:ConnectionString");
+        services.AddSingleton(new AzureServiceBusConnectionString(connString!));
+        services.AddTransient<SessionMessagePublisher>();
+
         return services;
     }
 }

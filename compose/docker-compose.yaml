@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   rabbitmq:
-    image: rabbitmq:3.13.6-management
+    image: rabbitmq-che
     container_name: 'rabbitmq'
     restart: unless-stopped
     networks:
@@ -11,6 +11,8 @@ services:
       - 5672:5672
       - 15672:15672
       - 15692:15692
+    # command:
+    #   sh -c "rabbitmq-plugins enable rabbitmq_consistent_hash_exchange"
     # volumes: 
     #   - rabbitmq:/var/lib/rabbitmq
 

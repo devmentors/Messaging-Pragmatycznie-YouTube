@@ -10,10 +10,29 @@ internal sealed class MessagePublisher(IConnection connection) : IMessagePublish
     {
         var json = JsonSerializer.Serialize(message);
         var messageBytes = Encoding.UTF8.GetBytes(json);
+        
         using var channel = connection.CreateModel();
+        var basicProperties = channel.CreateBasicProperties();
+        basicProperties.Type = message.GetType().Name;
+        
         channel.BasicPublish(exchange: exchange,
             routingKey: string.Empty,
-            basicProperties: null,
+            basicProperties: basicProperties,
+            body: messageBytes);
+    }
+    
+    public void PublishRespectingPartitionKey<TMessage>(TMessage message, string exchange) where TMessage : class, IMessage
+    {
+        var json = JsonSerializer.Serialize(message);
+        var messageBytes = Encoding.UTF8.GetBytes(json);
+        
+        using var channel = connection.CreateModel();
+        var basicProperties = channel.CreateBasicProperties();
+        basicProperties.Type = message.GetType().Name;
+        
+        channel.BasicPublish(exchange: exchange,
+            routingKey: message.PartitionKey,
+            basicProperties: basicProperties,
             body: messageBytes);
     }
 }

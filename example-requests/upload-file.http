@@ -1,0 +1,1 @@
+POST http://localhost:5280/upload-sync?parallelSend=true

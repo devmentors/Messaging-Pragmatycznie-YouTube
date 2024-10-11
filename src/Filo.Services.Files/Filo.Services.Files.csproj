@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Filo.Shared.Infrastructure\Filo.Shared.Infrastructure.csproj" />
+      <ProjectReference Include="..\Filo.Tools.RabbitMqTopology\Filo.Tools.RabbitMqTopology.csproj" />
     </ItemGroup>
 
 </Project>
